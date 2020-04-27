@@ -2,10 +2,10 @@ let transactions = [];
 let myChart;
 
 fetch("/api/transaction")
-  .then(response => {
+  .then((response) => {
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     // save db data on global variable
     transactions = data;
 
@@ -121,10 +121,10 @@ function sendTransaction(isAdding) {
       "Content-Type": "application/json"
     }
   })
-  .then(response => {    
+  .then((response) => {    
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     if (data.errors) {
       errorEl.textContent = "Missing Information";
     }
